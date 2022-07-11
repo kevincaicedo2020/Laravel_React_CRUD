@@ -1,0 +1,50 @@
+composer create-project laravel/laravel example-app
+php artisan make:model Prueba -mcr
+php artisan make:model Prueba -all
+php artisan make:controller Api/ProductController --api 
+
+
+
+
+e.preventDefault();  /*evitamos el envio del formulario porque usamos un submit*/
+
+
+
+https://laravel.com/docs/9.x/migrations#index-lengths-mysql-mariadb
+esto es para esos problemas de migracion
+
+***********************************************************RUTAS*************************************************************************************
+|| GET|HEAD  | /                         | home              | App\Http\Controllers\EmpleadoController@index   | web
+           |
+||           |                           |                   |                                                 | App\Http\Middleware\Authenticate
+           |
+|| GET|HEAD  | api/user                  |                   | Closure                                         | api
+           |
+||           |                           |                   |                                                 | App\Http\Middleware\Authenticate:
+sanctum    |
+|| GET|HEAD  | empleados                 | empleados.index   | App\Http\Controllers\EmpleadoController@index   | web
+           |
+||           |                           |                   |                                                 | App\Http\Middleware\Authenticate
+           |
+|| POST      | empleados                 | empleados.store   | App\Http\Controllers\EmpleadoController@store   | web
+           |
+||           |                           |                   |                                                 | App\Http\Middleware\Authenticate
+           |
+|| GET|HEAD  | empleados/create          | empleados.create  | App\Http\Controllers\EmpleadoController@create  | web
+           |
+||           |                           |                   |                                                 | App\Http\Middleware\Authenticate
+           |
+|| GET|HEAD  | empleados/{empleado}      | empleados.show    | App\Http\Controllers\EmpleadoController@show    | web
+           |
+||           |                           |                   |                                                 | App\Http\Middleware\Authenticate
+           |
+|| PUT|PATCH | empleados/{empleado}      | empleados.update  | App\Http\Controllers\EmpleadoController@update  | web
+           |
+||           |                           |                   |                                                 | App\Http\Middleware\Authenticate
+           |
+|| DELETE    | empleados/{empleado}      | empleados.destroy | App\Http\Controllers\EmpleadoController@destroy | web
+           |
+||           |                           |                   |                                                 | App\Http\Middleware\Authenticate
+           |
+|| GET|HEAD  | empleados/{empleado}/edit | empleados.edit    | App\Http\Controllers\EmpleadoController@edit    | web
+******************************************************************************************************************************************
